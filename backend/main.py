@@ -9,7 +9,10 @@ import joblib
 # Load trained pipeline
 # --------------------------------------------------
 
-MODEL_PATH = "churn_pipeline.pkl"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "churn_pipeline.pkl"
 
 pipeline = joblib.load(MODEL_PATH)
 
