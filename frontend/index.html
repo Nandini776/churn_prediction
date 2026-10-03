@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ChurnIQ | Customer Retention Intelligence</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+                <h2>Churn<span>IQ</span></h2>
+                <p>Retention Intelligence</p>
+            </div>
+
+        </div>
+
+
+        <div class="nav-section">
+
+            <span class="nav-label">WORKSPACE</span>
+
+            <button class="nav-item active"
+                    data-page="dashboard">
+
+                <i class="fa-solid fa-grid-2"></i>
+
+                <span>Dashboard</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="predict">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <span>Predict Churn</span>
+
+            </button>
+
+
+            <button class="nav-item"
+                    data-page="analytics">
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+                <span>Model Analytics</span>
+
+            </button>
+
+
+            <span class="nav-label second">
+                INFORMATION
+            </span>
+
+
+            <button class="nav-item"
+                    data-page="about">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <span>About Model</span>
+
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-footer">
+
+            <div class="api-card">
+
+                <div class="api-indicator"></div>
+
+                <div>
+
+                    <strong>API Status</strong>
+
+                    <small id="apiStatus">
+                        Checking...
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-card">
+
+                <div class="model-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>Logistic Regression</strong>
+
+                    <small>Production Pipeline</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button class="mobile-menu"
+                    id="mobileMenu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <div>
+
+                <span class="top-label">
+                    CUSTOMER INTELLIGENCE PLATFORM
+                </span>
+
+                <h1 id="pageTitle">
+                    Customer Churn Overview
+                </h1>
+
+            </div>
+
+
+            <div class="top-right">
+
+                <div class="threshold">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                    Threshold
+
+                    <strong>0.33</strong>
+
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        NS
+                    </div>
+
+                    <div class="profile-text">
+
+                        <strong>Analyst</strong>
+
+                        <small>ML Dashboard</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="content">
+
+
+            <!-- ================================================= -->
+            <!-- DASHBOARD -->
+            <!-- ================================================= -->
+
+            <section class="page active"
+                     id="dashboard">
+
+
+                <div class="hero">
+
+                    <div>
+
+                        <span class="hero-tag">
+                            <i class="fa-solid fa-sparkles"></i>
+                            AI-POWERED RETENTION
+                        </span>
+
+                        <h2>
+                            Understand churn
+                            <br>
+                            <span>before it happens.</span>
+                        </h2>
+
+                        <p>
+                            ChurnIQ uses your trained Logistic Regression
+                            pipeline to identify customers who may be at
+                            risk of leaving.
+                        </p>
+
+
+                        <button class="primary-btn"
+                                onclick="navigateTo('predict')">
+
+                            Predict Customer Churn
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-visual">
+
+                        <div class="orb orb-one"></div>
+                        <div class="orb orb-two"></div>
+
+                        <div class="hero-chart">
+
+                            <div class="chart-header">
+
+                                <span>Risk signal</span>
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                            </div>
+
+                            <div class="chart-bars">
+
+                                <span style="height:35%"></span>
+                                <span style="height:48%"></span>
+                                <span style="height:42%"></span>
+                                <span style="height:68%"></span>
+                                <span style="height:55%"></span>
+                                <span style="height:82%"></span>
+                                <span style="height:70%"></span>
+
+                            </div>
+
+                            <div class="chart-bottom">
+
+                                <span>Customer risk trend</span>
+
+                                <strong>+12.4%</strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- METRICS -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span>MODEL PERFORMANCE</span>
+
+                        <h3>Evaluation at a glance</h3>
+
+                    </div>
+
+                    <span class="test-badge">
+                        Test Set
+                    </span>
+
+                </div>
+
+
+                <div class="metric-grid">
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <div class="metric-info">
+
+                            <span>Accuracy</span>
+
+                            <strong>76.15%</strong>
+
+                            <small>
+                                Overall correctness
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-icon purple">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+
+                        <div class="metric-info">
+
+                            <span>Precision</span>
+
+                            <strong>53.80%</strong>
+
+                            <small>
+                                Churn predictions
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-icon blue">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+
+                        <div class="metric-info">
+
+                            <span>Recall</span>
+
+                            <strong>71.93%</strong>
+
+                            <small>
+                                Churn captured
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-icon green">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <div class="metric-info">
+
+                            <span>F1 Score</span>
+
+                            <strong>61.56%</strong>
+
+                            <small>
+                                Precision / recall balance
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECOND ROW -->
+
+                <div class="dashboard-grid">
+
+
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>MODEL SIGNAL</span>
+
+                                <h3>ROC-AUC</h3>
+
+                            </div>
+
+                            <span class="score-pill">
+                                0.8420
+                            </span>
+
+                        </div>
+
+
+                        <div class="auc-display">
+
+                            <div class="auc-ring">
+
+                                <div class="auc-inner">
+
+                                    <strong>84.20%</strong>
+
+                                    <span>ROC-AUC</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="auc-copy">
+
+                                <h4>
+                                    Strong ranking signal
+                                </h4>
+
+                                <p>
+                                    The model's ROC-AUC measures its
+                                    ability to distinguish churners
+                                    from non-churners across probability
+                                    thresholds.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+
+                                <span>DECISION POLICY</span>
+
+                                <h3>Why 0.33?</h3>
+
+                            </div>
+
+                            <i class="fa-solid fa-sliders"></i>
+
+                        </div>
+
+
+                        <div class="threshold-box">
+
+                            <div class="threshold-number">
+                                0.33
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Churn decision threshold
+                                </strong>
+
+                                <p>
+                                    Customers with predicted churn
+                                    probability ≥ 33% are classified
+                                    as likely to churn.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- PREDICT -->
+            <!-- ================================================= -->
+
+            <section class="page"
+                     id="predict">
+
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="hero-tag">
+                            PREDICTION ENGINE
+                        </span>
+
+                        <h2>
+                            Assess customer
+                            <span>churn risk.</span>
+                        </h2>
+
+                        <p>
+                            Enter customer information and let the
+                            trained ML pipeline estimate the probability
+                            of churn.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="predictionForm">
+
+
+                    <!-- CUSTOMER PROFILE -->
+
+                    <div class="form-panel">
+
+                        <div class="form-title">
+
+                            <div class="form-number">
+                                01
+                            </div>
+
+                            <div>
+
+                                <span>CUSTOMER PROFILE</span>
+
+                                <h3>Basic information</h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>Gender</label>
+
+                                <select id="gender" required>
+
+                                    <option value="Female">
+                                        Female
+                                    </option>
+
+                                    <option value="Male">
+                                        Male
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Senior Citizen</label>
+
+                                <select id="SeniorCitizen">
+
+                                    <option value="0">
+                                        No
+                                    </option>
+
+                                    <option value="1">
+                                        Yes
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Partner</label>
+
+                                <select id="Partner">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Dependents</label>
+
+                                <select id="Dependents">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Tenure</label>
+
+                                <div class="input-with-unit">
+
+                                    <input
+                                        type="number"
+                                        id="tenure"
+                                        min="0"
+                                        max="72"
+                                        value="12"
+                                        required>
+
+                                    <span>months</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SERVICES -->
+
+                    <div class="form-panel">
+
+                        <div class="form-title">
+
+                            <div class="form-number">
+                                02
+                            </div>
+
+                            <div>
+
+                                <span>SERVICE PROFILE</span>
+
+                                <h3>Subscribed services</h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>Phone Service</label>
+
+                                <select id="PhoneService">
+
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Multiple Lines</label>
+
+                                <select id="MultipleLines">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No phone service">
+                                        No phone service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Internet Service</label>
+
+                                <select id="InternetService">
+
+                                    <option value="DSL">DSL</option>
+
+                                    <option value="Fiber optic">
+                                        Fiber optic
+                                    </option>
+
+                                    <option value="No">
+                                        No
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Online Security</label>
+
+                                <select id="OnlineSecurity">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                    <option value="No internet service">
+                                        No internet service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Online Backup</label>
+
+                                <select id="OnlineBackup">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                    <option value="No internet service">
+                                        No internet service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Device Protection</label>
+
+                                <select id="DeviceProtection">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                    <option value="No internet service">
+                                        No internet service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Tech Support</label>
+
+                                <select id="TechSupport">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                    <option value="No internet service">
+                                        No internet service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Streaming TV</label>
+
+                                <select id="StreamingTV">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                    <option value="No internet service">
+                                        No internet service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Streaming Movies</label>
+
+                                <select id="StreamingMovies">
+
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+
+                                    <option value="No internet service">
+                                        No internet service
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BILLING -->
+
+                    <div class="form-panel">
+
+                        <div class="form-title">
+
+                            <div class="form-number">
+                                03
+                            </div>
+
+                            <div>
+
+                                <span>SUBSCRIPTION & BILLING</span>
+
+                                <h3>Account information</h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="field">
+
+                                <label>Contract</label>
+
+                                <select id="Contract">
+
+                                    <option value="Month-to-month">
+                                        Month-to-month
+                                    </option>
+
+                                    <option value="One year">
+                                        One year
+                                    </option>
+
+                                    <option value="Two year">
+                                        Two year
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Paperless Billing</label>
+
+                                <select id="PaperlessBilling">
+
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Payment Method</label>
+
+                                <select id="PaymentMethod">
+
+                                    <option value="Electronic check">
+                                        Electronic check
+                                    </option>
+
+                                    <option value="Mailed check">
+                                        Mailed check
+                                    </option>
+
+                                    <option value="Bank transfer (automatic)">
+                                        Bank transfer (automatic)
+                                    </option>
+
+                                    <option value="Credit card (automatic)">
+                                        Credit card (automatic)
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Monthly Charges</label>
+
+                                <div class="input-with-unit">
+
+                                    <span class="currency">
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="MonthlyCharges"
+                                        step="0.01"
+                                        value="70"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>Total Charges</label>
+
+                                <div class="input-with-unit">
+
+                                    <span class="currency">
+                                        ₹
+                                    </span>
+
+                                    <input
+                                        type="number"
+                                        id="TotalCharges"
+                                        step="0.01"
+                                        value="840"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="predict-action">
+
+                        <div>
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <span>
+                                Your customer data is processed
+                                through the local prediction API.
+                            </span>
+
+                        </div>
+
+
+                        <button type="submit"
+                                class="primary-btn"
+                                id="predictBtn">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            Analyze Churn Risk
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- RESULT -->
+
+                <div class="result-panel"
+                     id="resultPanel">
+
+                    <div class="result-header">
+
+                        <div>
+
+                            <span>PREDICTION RESULT</span>
+
+                            <h3 id="resultTitle">
+                                Customer Risk Assessment
+                            </h3>
+
+                        </div>
+
+                        <button class="close-result"
+                                onclick="closeResult()">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="result-content">
+
+
+                        <div class="risk-ring"
+                             id="riskRing">
+
+                            <div>
+
+                                <strong id="probabilityValue">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    churn probability
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="risk-info">
+
+                            <div class="risk-badge"
+                                 id="riskBadge">
+
+                                ANALYZING
+
+                            </div>
+
+                            <h2 id="predictionText">
+                                —
+                            </h2>
+
+                            <p id="riskDescription">
+                                —
+                            </p>
+
+
+                            <div class="risk-meta">
+
+                                <div>
+
+                                    <span>Decision threshold</span>
+
+                                    <strong>33%</strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>Model</span>
+
+                                    <strong>Logistic Regression</strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- ANALYTICS -->
+            <!-- ================================================= -->
+
+            <section class="page"
+                     id="analytics">
+
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="hero-tag">
+                            MODEL PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Inside the
+                            <span>prediction engine.</span>
+                        </h2>
+
+                        <p>
+                            Evaluation results from your trained
+                            Logistic Regression pipeline.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="analytics-grid">
+
+
+                    <div class="large-metric">
+
+                        <span>ACCURACY</span>
+
+                        <strong>76.15%</strong>
+
+                        <div class="progress">
+
+                            <span style="width:76.15%"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="large-metric">
+
+                        <span>PRECISION</span>
+
+                        <strong>53.80%</strong>
+
+                        <div class="progress">
+
+                            <span style="width:53.8%"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="large-metric">
+
+                        <span>RECALL</span>
+
+                        <strong>71.93%</strong>
+
+                        <div class="progress">
+
+                            <span style="width:71.93%"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="large-metric">
+
+                        <span>F1 SCORE</span>
+
+                        <strong>61.56%</strong>
+
+                        <div class="progress">
+
+                            <span style="width:61.56%"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel comparison-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>MODEL EVALUATION</span>
+
+                            <h3>Classification metrics</h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Metric</th>
+
+                                    <th>Score</th>
+
+                                    <th>Interpretation</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>Accuracy</td>
+
+                                    <td>
+                                        <strong>76.15%</strong>
+                                    </td>
+
+                                    <td>
+                                        Overall predictions that were correct
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Precision</td>
+
+                                    <td>
+                                        <strong>53.80%</strong>
+                                    </td>
+
+                                    <td>
+                                        Predicted churners that actually churned
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>Recall</td>
+
+                                    <td>
+                                        <strong>71.93%</strong>
+                                    </td>
+
+                                    <td>
+                                        Actual churners detected by the model
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>F1 Score</td>
+
+                                    <td>
+                                        <strong>61.56%</strong>
+                                    </td>
+
+                                    <td>
+                                        Balance between precision and recall
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>ROC-AUC</td>
+
+                                    <td>
+                                        <strong>84.20%</strong>
+                                    </td>
+
+                                    <td>
+                                        Ranking ability across thresholds
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>PR-AUC</td>
+
+                                    <td>
+                                        <strong>63.48%</strong>
+                                    </td>
+
+                                    <td>
+                                        Precision-recall performance
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <p>
+                        Metrics shown above are from the test-set evaluation
+                        of the Logistic Regression pipeline using the
+                        tuned 0.33 decision threshold.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- ABOUT -->
+            <!-- ================================================= -->
+
+            <section class="page"
+                     id="about">
+
+
+                <div class="about-hero">
+
+                    <div class="about-icon">
+
+                        <i class="fa-solid fa-brain"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="hero-tag">
+                            MACHINE LEARNING
+                        </span>
+
+                        <h2>
+                            Turning customer signals
+                            <span>into retention insights.</span>
+                        </h2>
+
+                        <p>
+                            ChurnIQ is a customer churn prediction
+                            application powered by a trained Logistic
+                            Regression machine learning pipeline.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-grid">
+
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <h3>Customer Data</h3>
+
+                        <p>
+                            The model uses customer demographics,
+                            tenure, services, contracts, billing and
+                            payment information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                        <h3>ML Pipeline</h3>
+
+                        <p>
+                            Your trained preprocessing and Logistic
+                            Regression pipeline handles the input
+                            transformation before prediction.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <h3>Probability</h3>
+
+                        <p>
+                            The API returns a churn probability rather
+                            than only a binary prediction.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-card">
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                        <h3>Threshold Optimization</h3>
+
+                        <p>
+                            The application uses a 0.33 threshold,
+                            selected through out-of-fold F1 optimization
+                            in the training workflow.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline-flow">
+
+                    <div class="flow-step">
+
+                        <span>01</span>
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <strong>Customer Data</strong>
+
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-step">
+
+                        <span>02</span>
+
+                        <i class="fa-solid fa-gears"></i>
+
+                        <strong>Preprocessing</strong>
+
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-step">
+
+                        <span>03</span>
+
+                        <i class="fa-solid fa-brain"></i>
+
+                        <strong>Logistic Regression</strong>
+
+                    </div>
+
+                    <div class="flow-line"></div>
+
+                    <div class="flow-step">
+
+                        <span>04</span>
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <strong>Risk Probability</strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                ChurnIQ © 2026
+            </span>
+
+            <span>
+                Built with FastAPI · Scikit-learn · Logistic Regression
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div class="toast"
+     id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Success
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
